@@ -1,0 +1,250 @@
+.login-background {
+  background-image: url('https://raw.githubusercontent.com/bytebase/bytebase.com/main/public/images/login-bg.webp');
+  background-size: cover;
+  background-position: 50%;
+  min-height: 100vh;
+  width: 100vw;
+  --page-background-alignment: right;
+
+
+}
+
+.login-main {
+  overflow: hidden;
+}
+
+.login-main {
+
+  display: grid;
+  justify-content: flex-end;
+  /* 桌面端默认靠右 */
+  align-items: center;
+  min-height: 100vh;
+  /* padding: 0 80px; */
+  grid-template-columns: minmax(320px, 550px);
+  /* 固定列宽，最小320px */
+  box-sizing: border-box;
+  /* 限制最大宽度 */
+  margin: 0 auto;
+}
+
+.login-section {
+  width: 100%;
+  max-width: 400px;
+  margin: 0;
+  padding: 40px;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+/* Logo容器 */
+.logo-container {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.logo {
+  height: 52px;
+  width: auto;
+}
+
+/* 标题样式 */
+.title {
+  font-size: 1.5rem;
+  color: #1e212a;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+/* 描述文本 */
+.description {
+  font-size: 0.875rem;
+  color: #65676e;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+/* 社交登录按钮组 */
+.social-login-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+/* 社交按钮样式 */
+.social-button {
+  align-items: center;
+  display: flex;
+  position: relative;
+  height: 55px;
+  width: 100%;
+  padding: 12px;
+  background-color: #ffffff;
+  border: 1px solid #c9cace;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: #1e212a;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.social-button:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.social-button-text {
+  vertical-align: baseline;
+}
+
+/* 社交按钮图标 */
+.social-icon {
+  display: inline-block;
+  text-align: center;
+  justify-items: center;
+  width: 20px;
+  height: 20px;
+  background-position: 50%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 8px;
+}
+
+/* 社交按钮图标续 */
+.google-icon {
+  background-image: url("/google.svg");
+}
+
+.github-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%2324292e' d='M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.161 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12c0-5.523-4.477-10-10-10z'/%3E%3C/svg%3E");
+}
+
+.microsoft-icon {
+  background-image: url("/microsoft.svg");
+}
+
+/* 分隔线样式 */
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 24px 0;
+  color: #65676e;
+  font-size: 0.875rem;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 40%;
+  height: 1px;
+  background-color: #c9cace;
+}
+
+.divider::before {
+  left: 0;
+}
+
+.divider::after {
+  right: 0;
+}
+
+/* 邮箱表单样式 */
+.email-login-form {
+  position: relative;
+  margin-bottom: 16px;
+}
+
+.email-input {
+  width: 100%;
+  height: 55px;
+  padding: 10px 10px;
+  margin-bottom: 12px;
+  border: 1px solid #c9cace;
+  border-radius: 3px;
+  font-size: 1rem;
+  color: #000;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.email-input:focus {
+  outline: none;
+  border-color: #4F46E5;
+}
+
+/* 自定义placeholder */
+.placeholder-label {
+  position: absolute;
+  top: 18px;
+  left: 20px;
+  color: #65676e;
+  font-size: 0.9rem;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+/* 输入框聚焦或有内容时，placeholder上移并变小 */
+.email-input:focus+.placeholder-label,
+.email-input:not(:placeholder-shown)+.placeholder-label {
+  background-color: #fff;
+  padding: 1px 6px;
+  left: 8px;
+  top: -7px;
+  font-size: 0.75rem;
+  color: #4F46E5;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 55px;
+  padding: 12px;
+  background-color: #4F46E5;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #4338ca;
+}
+
+/* 注册链接样式 */
+.register-text {
+  text-align: center;
+  font-size: 0.875rem;
+  color: #65676e;
+  margin-top: 20px;
+}
+
+.register-link {
+  color: #635dff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 500px) {
+  .login-section {
+    max-width: 100vw;
+    width: 100%;
+    padding: 30px 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: static;
+  }
+
+  .login-main {
+    padding: 0;
+    margin: 0;
+    grid-template-columns: 1fr;
+
+  }
+
+}
